@@ -95,26 +95,76 @@ $(document).ready(function() {
   });
 
   $('#batman').click(function(){
-    $('#grilla-pixeles').toggle(1000, cargarSuperheroe(batman))
+    $('#grilla-pixeles').toggle(1000, cargarSuperheroe(batman));
   });
+
+  $('#batman').mousedown(function(){
+    $('#grilla-pixeles').toggle(700, cargarSuperheroe(batman));
+  })
 
 
   $('#wonder').click(function(){
     $('#grilla-pixeles').toggle(1000, cargarSuperheroe(wonder));
   });
+  $('#wonder').mousedown(function(){
+    $('#grilla-pixeles').toggle(700, cargarSuperheroe(wonder))
+  })
 
   $('#flash').click(function(){
     $('#grilla-pixeles').toggle(1000, cargarSuperheroe(flash));
   });
+  $('#flash').mousedown(function(){
+    $('#grilla-pixeles').toggle(700, cargarSuperheroe(flash))
+  })
   
   $('#invisible').click(function(){
     $('#grilla-pixeles').toggle(1000, cargarSuperheroe(invisible));
   });
+  $('#invisible').mousedown(function(){
+    $('#grilla-pixeles').toggle(700, cargarSuperheroe(invisible))
+  })
 
   $('#guardar').click(function(){
     guardarPixelArt();
   })
 
+  $('#subtitulo3').mouseover(function(){
+    $(this).css({fontSize: '25px'})
+  })
+  $('#subtitulo3').mouseout(function(){
+    $(this).css({fontSize: '18px'})
+  })
+  
+  // animacion fotos de seleccion
+  $('#batman').mouseover(function(){
+    $(this).css({width: '250px', height: '150px', margin: '35px', cursor: 'pointer'})
+  })
+  $('#batman').mouseout(function(){
+    $(this).css({width: '350px', height: '208px', margin: 'auto'})
+  })
+
+  $('#wonder').mouseover(function(){
+    $(this).css({width: '250px', height: '150px', margin: '35px'})
+  })
+  $('#wonder').mouseout(function(){
+    $(this).css({width: '350px', height: '208px', margin: 'auto'})
+  })
+
+  $('#flash').mouseover(function(){
+    $(this).css({width: '250px', height: '150px', margin: '35px'})
+  })
+  $('#flash').mouseout(function(){
+    $(this).css({width: '350px', height: '208px', margin: 'auto'})
+  })
+  
+  $('#invisible').mouseover(function(){
+    $(this).css({width: '250px', height: '150px', margin: '35px'})
+  })
+  $('#invisible').mouseout(function(){
+    $(this).css({width: '350px', height: '208px', margin: 'auto'})
+  })
+
+  
 
 
 });
