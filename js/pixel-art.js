@@ -87,25 +87,51 @@ $(document).ready(function() {
     }
   })
 
-  
+  //borrar boton
   $('#borrar').click(function(){
     $('#grilla-pixeles div').each(function(){
       $(this).animate({backgroundColor: 'white'}, 1000);
     });
   });
-
-  $('img').click(function(){
+// cargar heroe
+  $('#batman').click(function(){
     $('#grilla-pixeles').toggle(1000, cargarSuperheroe(batman));
   });
 
-  $('img').mousedown(function(){
+  $('#batman').mousedown(function(){
     $('#grilla-pixeles').toggle(700, cargarSuperheroe(batman));
   })
 
+  $('#wonder').click(function(){
+    $('#grilla-pixeles').toggle(1000, cargarSuperheroe(wonder));
+  });
+
+  $('#wonder').mousedown(function(){
+    $('#grilla-pixeles').toggle(700, cargarSuperheroe(wonder));
+  })
+
+  $('#flash').click(function(){
+    $('#grilla-pixeles').toggle(1000, cargarSuperheroe(flash));
+  });
+
+  $('#flash').mousedown(function(){
+    $('#grilla-pixeles').toggle(700, cargarSuperheroe(flash));
+  })
+
+  $('#invisible').click(function(){
+    $('#grilla-pixeles').toggle(1000, cargarSuperheroe(invisible));
+  });
+
+  $('#invisible').mousedown(function(){
+    $('#grilla-pixeles').toggle(700, cargarSuperheroe(invisible));
+  })
+
+
+//guardar boton
   $('#guardar').click(function(){
     guardarPixelArt();
   })
-
+//subtitulo
   $('#subtitulo3').mouseover(function(){
     $(this).css({fontSize: '25px'})
   })
@@ -118,7 +144,7 @@ $(document).ready(function() {
     $(this).css({width: '250px', height: '150px', margin: '35px', cursor: 'pointer'})
   })
   $('img').mouseout(function(){
-    $(this).css({width: '350px', height: '208px', margin: 'auto'})
+    $(this).css({width: '350px', height: '206px', margin: 'auto'})
   })
 
   $('img').click(function(){
